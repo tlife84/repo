@@ -32,6 +32,10 @@ entries:
       url: /mydoc_introduction.html
       output: web, pdf
 
+    - title: Test navigation
+      url: /mydoc_test_nav.html
+      output: web, pdf
+
     - title: Supported features
       url: /mydoc_supported_features.html
       output: web, pdf
