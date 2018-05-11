@@ -3,7 +3,7 @@ title: Introduction
 sidebar: mydoc_sidebar
 permalink: mydoc_introduction.html
 folder: mydoc
-private: true
+published: false
 ---
 
 ## Overview
