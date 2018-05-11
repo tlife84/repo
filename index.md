@@ -175,7 +175,7 @@ The sidebar data file uses a specific YAML syntax that you must follow. Follow t
 ```yaml
 entries:
 - title: sidebar
-  product: Jekyll Doc Theme
+  product: 지개넓얕
   version: 6.0
   folders:
   - title: Overview
@@ -242,7 +242,7 @@ Each level must have at least one topic before the next level starts. You can't 
 ```yamll
 entries:
 - title: sidebar
-  product: Jekyll Doc Theme
+  product: 지개넓얕
   version: 6.0
   folders:
   - title: Overview
