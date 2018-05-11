@@ -35,7 +35,7 @@ platform: mac
 On a page in my site (it can be HTML or markdown), you can conditionalize content using the following:
 
 {% raw %}
-```liquid
+```yaml
 {% if page.platform == "mac" %}
 Here's some info about the Mac.
 {% elsif page.platform == "windows" %}
