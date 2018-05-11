@@ -1,4 +1,4 @@
-repository: tlife84/documentation-theme-jekyll
+repository: tlife84/tlife84.github.io
 
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
@@ -14,9 +14,6 @@ company_name: Your company
 
 github_editme_path: tlife84/githut.io
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
-
-# gitlab_editme_path: tomjoht/documentation-theme-jekyll/blob/gh-pages/
-# if you're using GitLab, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
 disqus_shortname: idratherbewriting
 # if you're using disqus for comments, add the shortname here. if not, leave this value blank.
@@ -37,10 +34,10 @@ exclude:
 
 feedback_subject_line: 지개좁얕
 
-feedback_email: tomjoht@gmail.com
+feedback_email: tlife84@gmail.com
 # used as a contact email for the Feedback link in the top navigation bar
 
-feedback_disable: true
+feedback_disable: false
 # if you uncomment the previous line, the Feedback link gets removed
 
 # feedback_text: "Need help?"
@@ -112,4 +109,4 @@ description: "Intended as a documentation theme based on Jekyll for technical wr
 
 # needed for sitemap.xml file only
 url: http://idratherbewriting.com
-baseurl: /documentation-theme-jekyll
+baseurl: /tlife84.github.io
