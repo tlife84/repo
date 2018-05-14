@@ -91,6 +91,7 @@ worker.worker1.port=8009
 ### 로컬 톰캣
 제어판 > 프로그램 및 기능 > Windows 기능 사용/사용 안함 > 인터넷 정보 서비스 > World Wide Web 서비스 > 응용 프로그램 개발 기능 > ISAPI 필터와 ISAPI 확장을 체크하여 설치한다.
 
+![](../../iis_setting_0.png)
 {% include image.html file="iis_setting_0.png" %}
 
 IIS 관리자 > 서버 > ISAPI 및 CGI 제한 진입
