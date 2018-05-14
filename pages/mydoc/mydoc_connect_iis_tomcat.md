@@ -15,7 +15,7 @@ summary: 톰캣 커넥터는 IIS에서 톰캣을 호출할 때 필요한 라이�
 다운로드한 압축파일에서 isapi_redirect.dll 파일만 원하는 경로에 복사한다. 다른 글에서는 톰캣이 설치된 디렉토리 안에 dll파일을 복사하는 경우가 많은데 톰캣 서버가 원격서버에 있을 경우는 톰캣 디렉토리 자체가 없다. 또 톰캣 커넥터는 IIS가 주체가 되는 라이브러리이므로 여기서는 IIS 디렉토리 안에 복사하였다. **C:\inetpub\isapi_redirect\local** 디렉토리를 생성하여 그 안에 dll파일을 복사한다.
 
 같은 경로에 isapi_redirect.properties 파일을 생성하고 아래 내용을 작성한다.
-```yaml
+```liquid
 # 확장 경로. jakarta는 IIS에서 가상디렉토리로 지정해야하니 잘 기억해둔다.
 extension_uri=/jakarta/isapi_redirect.dll
 
@@ -34,14 +34,14 @@ worker_mount_file=C:\inetpub\isapi_redirect\local\uriworkermap.properties
 
 ### uriworkermap.properties 설정  
 isapi_redirect.properties 파일의 worker_mount_file 항목과 매핑되는 파일이다. worker_mount_file에서 지정했던 위치에 uriworkermap.properties 파일을 생성하고 다음 내용을 넣어준다.
-```yaml
+```liquid
 /certiplanner3_poi/certireport=worker1
 ```
 worker1에 연결된 uri는 호스트 주소를 제외한 나머지 주소다. 위 uri를 직접 자바 클래스에 연결해도 되고 worker에 jsp를 연결한 다음 jsp에서 자바 클래스를 호출해도 된다. 위 uri를 호출하면 worker1이 ajp13타입으로 8009포트를 통하여 톰캣에 연결한다는 의미다. worker1을 설정하는 건 workers.properties에서 한다.
 
 ### workers.properties 설정
 isapi_redirect.properties 파일의 worker_file 항목과 매핑되는 파일이다. worker_file에서 지정했던 위치에 workers.properties 파일을 생성하고 다음 내용을 넣어준다.
-```yaml
+```liquid
 worker.list=worker1
 worker.worker1.type=ajp13
 worker.worker1.host=localhost
@@ -54,7 +54,7 @@ worker.worker1.port=8009
 
 ### Tomcat Connector 복사
 다운로드한 isapi_redirect.dll파일을 **C:\inetpub\isapi_redirect\remote** 디렉토리를 생성하여 그 안에 복사한다. 같은 경로에 isapi_redirect.properties 파일을 생성하고 아래 내용을 작성한다. 위 로컬 톰캣 커넥터의 내용과 비교해보면 local->remote 디렉토리 이름만 바뀌었다.
-```yaml
+```liquid
 # 확장 경로. jakarta는 IIS에서 가상디렉토리로 지정해야하니 잘 기억해둔다.
 extension_uri=/jakarta/isapi_redirect.dll
 
@@ -73,12 +73,12 @@ worker_mount_file=C:\inetpub\isapi_redirect\remote\uriworkermap.properties
 
 ### uriworkermap.properties 설정  
 로컬 톰캣 커넥터와 동일하나 원격 톰캣 서버에서 호출될 uri는 가상디렉토리를 한 단계 줄여보았다.
-```yaml
+```liquid
 /certireport=worker1
 ```
 
 ### workers.properties 설정
-```yaml
+```liquid
 worker.list=worker1
 worker.worker1.type=ajp13
 worker.worker1.host=192.168.11.128
@@ -91,61 +91,61 @@ worker.worker1.port=8009
 ### 로컬 톰캣
 제어판 > 프로그램 및 기능 > Windows 기능 사용/사용 안함 > 인터넷 정보 서비스 > World Wide Web 서비스 > 응용 프로그램 개발 기능 > ISAPI 필터와 ISAPI 확장을 체크하여 설치한다.
 
-![](images/iis_setting_0.png)
+![](../../images/iis_setting_0.png)
 
 IIS 관리자 > 서버 > ISAPI 및 CGI 제한 진입
 
-![](images/iis_setting_1.png)
+![](../../images/iis_setting_1.png)
 
 우클릭 > 추가 메뉴로 진입하여 *ISAPI 또는 CGI 경로*는 **C:\inetpub\isapi_redirect\local\isapi_redirect.dll** 파일을 선택, 설명은 임의로 입력, 확장 경로 실행 허용을 체크한다.
 
-![](images/iis_setting_2.png)
+![](../../images/iis_setting_2.png)
 
 Default Web Site에 가상디렉토리를 추가한다. 별칭은 isapi_redirect.properties에서 extension_uri로 지정했던 **jakarta**로 하고 경로는 isapi_redirect.dll이 저장된 경로를 지정한다.
 
-![](images/iis_setting_3.png)
+![](../../images/iis_setting_3.png)
 
 가상디렉토리 추가 후 Default Web Site > ISAPI 필터
 
-![](images/iis_setting_3-1.png)
+![](../../images/iis_setting_3-1.png)
 
 우클릭 > 추가 창에서 필터이름은 임의로 지정, 실행파일은 *C:\inetpub\isapi_redirect\local\isapi_redirect.dll* 파일을 선택한다.
 
-![](images/iis_setting_4.png)
+![](../../images/iis_setting_4.png)
 
 ISAPI 필터를 등록했다면, Default Web Site 또는 하위의 특정 사이트 노드를 클릭한 뒤 처리기 매핑 메뉴로 진입한다. ISAPI-dll이 사용 안함으로 되어있다면, ISAPI-dll을 선택 후 우측의 기능 사용 권한 편집을 클릭한 뒤, 실행 권한을 준다.
 
-![](images/iis_setting_5.png)
+![](../../images/iis_setting_5.png)
 
 ### 원격 톰캣
 다시 IIS 관리자 > 서버 > ISAPI 및 CGI 제한 진입
 
-![](images/iis_setting_1.png)
+![](../../images/iis_setting_1.png)
 
 우클릭 > 추가 메뉴로 진입하여 *ISAPI 또는 CGI 경로*는 **C:\inetpub\isapi_redirect\remote\isapi_redirect.dll** 파일을 선택, 설명은 로컬 커텍터와 겹치지 않게 입력, 확장 경로 실행 허용을 체크한다. 
 
-![](images/iis_setting_6.png)
+![](../../images/iis_setting_6.png)
 
 로컬과 원격 커넥터 두 개를 모두 등록하는 이유는, 커넥터 환경을 구성하는 uriworkermap.properties와 workers.properties 파일이 isapi_redirect.properties 파일에 종속되는데 isapi_redirect.properties 파일은 반드시 isapi_redirect.dll 파일과 같은 디렉토리에 있어야 하기 때문이다. 그러므로 하나의 isapi_redirect.dll 파일을 서로 다른 환경의 커넥터가 공유할 수 없다.
 
 사이트 우클릭 > 웹 사이트 추가
 
-![](images/iis_setting_7.png)
+![](../../images/iis_setting_7.png)
 
 *사이트 이름*은 임의로 지정, *실제 경로*는 원격 톰캣 커넥터와 연결할 사이트 디렉토리를 지정, *포트*는 Default Web Site와 충돌하지 않는 다른 포트를 지정한다.
 
 새로 만든 사이트에도 커넥터 연결을 위한 가상디렉토리를 추가한다. *실제 경로*가 로컬 커넥터와 다른 것을 유의한다.
 
-![](images/iis_setting_9.png)
+![](../../images/iis_setting_9.png)
 
 가상디렉토리 추가 후 새로 만든 사이트 선택 > ISAPI 필터
 
-![](images/iis_setting_10.png)
+![](../../images/iis_setting_10.png)
 
 우클릭 > 추가 창에서 필터이름은 임의로 지정, 실행파일은 *C:\inetpub\isapi_redirect\remote\isapi_redirect.dll* 파일을 선택한다.
 
-![](images/iis_setting_11.png)
+![](../../images/iis_setting_11.png)
 
 ISAPI 필터를 등록했다면, Default Web Site 또는 하위의 특정 사이트 노드를 클릭한 뒤 처리기 매핑 메뉴로 진입한다. ISAPI-dll이 사용 안함으로 되어있다면, ISAPI-dll을 선택 후 우측의 기능 사용 권한 편집을 클릭한 뒤, 실행 권한을 준다.
 
-![](images/iis_setting_5.png)
+![](../../images/iis_setting_5.png)
