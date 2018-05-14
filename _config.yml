@@ -3,7 +3,7 @@ repository: tlife84/tlife84.github.io
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: 지개좁얕
+topnav_title: 개발노트
 # this appears on the top navigation bar next to the home button
 
 site_title: Jekyll theme for documentation
@@ -32,7 +32,7 @@ exclude:
   - .gitignore
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_subject_line: 지개좁얕
+feedback_subject_line: 개발노트
 
 feedback_email: tlife84@gmail.com
 # used as a contact email for the Feedback link in the top navigation bar

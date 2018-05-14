@@ -14,7 +14,7 @@ topnav_dropdowns:
   folders:
     - title: Products
       folderitems:
-        - title: 지개좁얕
+        - title: 개발노트
           url: /mydoc_introduction.html
         - title: Product 1
           url: /p1_landing_page.html

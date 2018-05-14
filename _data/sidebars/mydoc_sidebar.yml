@@ -2,7 +2,7 @@
 
 entries:
 - title: sidebar
-  product: 지개좁얕
+  product: 개발노트
   #version: 6.0
   folders:
 
@@ -19,17 +19,21 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Overview
+  - title: Home
     output: web, pdf
     folderitems:
 
-    - title: Get started
+    - title: Home
       url: /index.html
       output: web, pdf
       type: homepage
 
-    - title: Introduction
-      url: /mydoc_introduction.html
+  - title: Web
+    output: web, pdf
+    folderitems:
+
+    - title: IIS와 톰캣 연결하기
+      url: /mydoc_connect_iis_tomcat.html
       output: web, pdf
 
     - title: Test navigation
