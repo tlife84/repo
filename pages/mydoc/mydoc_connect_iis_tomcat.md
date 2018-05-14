@@ -91,28 +91,33 @@ worker.worker1.port=8009
 ### 로컬 톰캣
 제어판 > 프로그램 및 기능 > Windows 기능 사용/사용 안함 > 인터넷 정보 서비스 > World Wide Web 서비스 > 응용 프로그램 개발 기능 > ISAPI 필터와 ISAPI 확장을 체크하여 설치한다.
 
-![](../../iis_setting_0.png)
 {% include image.html file="iis_setting_0.png" %}
+
 
 IIS 관리자 > 서버 > ISAPI 및 CGI 제한 진입
 
 {% include image.html file="iis_setting_1.png" %}
 
+
 우클릭 > 추가 메뉴로 진입하여 *ISAPI 또는 CGI 경로*는 **C:\inetpub\isapi_redirect\local\isapi_redirect.dll** 파일을 선택, 설명은 임의로 입력, 확장 경로 실행 허용을 체크한다.
 
 {% include image.html file="iis_setting_2.png" %}
+
 
 Default Web Site에 가상디렉토리를 추가한다. 별칭은 isapi_redirect.properties에서 extension_uri로 지정했던 **jakarta**로 하고 경로는 isapi_redirect.dll이 저장된 경로를 지정한다.
 
 {% include image.html file="iis_setting_3.png" %}
 
+
 가상디렉토리 추가 후 Default Web Site > ISAPI 필터
 
 {% include image.html file="iis_setting_3-1.png" %}
 
+
 우클릭 > 추가 창에서 필터이름은 임의로 지정, 실행파일은 *C:\inetpub\isapi_redirect\local\isapi_redirect.dll* 파일을 선택한다.
 
 {% include image.html file="iis_setting_4.png" %}
+
 
 ISAPI 필터를 등록했다면, Default Web Site 또는 하위의 특정 사이트 노드를 클릭한 뒤 처리기 매핑 메뉴로 진입한다. ISAPI-dll이 사용 안함으로 되어있다면, ISAPI-dll을 선택 후 우측의 기능 사용 권한 편집을 클릭한 뒤, 실행 권한을 준다.
 
@@ -123,9 +128,11 @@ ISAPI 필터를 등록했다면, Default Web Site 또는 하위의 특정 사이
 
 {% include image.html file="iis_setting_1.png" %}
 
+
 우클릭 > 추가 메뉴로 진입하여 *ISAPI 또는 CGI 경로*는 **C:\inetpub\isapi_redirect\remote\isapi_redirect.dll** 파일을 선택, 설명은 로컬 커텍터와 겹치지 않게 입력, 확장 경로 실행 허용을 체크한다. 
 
 {% include image.html file="iis_setting_6.png" %}
+
 
 로컬과 원격 커넥터 두 개를 모두 등록하는 이유는, 커넥터 환경을 구성하는 uriworkermap.properties와 workers.properties 파일이 isapi_redirect.properties 파일에 종속되는데 isapi_redirect.properties 파일은 반드시 isapi_redirect.dll 파일과 같은 디렉토리에 있어야 하기 때문이다. 그러므로 하나의 isapi_redirect.dll 파일을 서로 다른 환경의 커넥터가 공유할 수 없다.
 
@@ -133,19 +140,23 @@ ISAPI 필터를 등록했다면, Default Web Site 또는 하위의 특정 사이
 
 {% include image.html file="iis_setting_7.png" %}
 
+
 *사이트 이름*은 임의로 지정, *실제 경로*는 원격 톰캣 커넥터와 연결할 사이트 디렉토리를 지정, *포트*는 Default Web Site와 충돌하지 않는 다른 포트를 지정한다.
 
 새로 만든 사이트에도 커넥터 연결을 위한 가상디렉토리를 추가한다. *실제 경로*가 로컬 커넥터와 다른 것을 유의한다.
 
 {% include image.html file="iis_setting_9.png" %}
 
+
 가상디렉토리 추가 후 새로 만든 사이트 선택 > ISAPI 필터
 
 {% include image.html file="iis_setting_10.png" %}
 
+
 우클릭 > 추가 창에서 필터이름은 임의로 지정, 실행파일은 *C:\inetpub\isapi_redirect\remote\isapi_redirect.dll* 파일을 선택한다.
 
 {% include image.html file="iis_setting_11.png" %}
+
 
 ISAPI 필터를 등록했다면, Default Web Site 또는 하위의 특정 사이트 노드를 클릭한 뒤 처리기 매핑 메뉴로 진입한다. ISAPI-dll이 사용 안함으로 되어있다면, ISAPI-dll을 선택 후 우측의 기능 사용 권한 편집을 클릭한 뒤, 실행 권한을 준다.
 
