@@ -7,6 +7,7 @@ summary: 톰캣 커넥터는 IIS에서 톰캣을 호출할 때 필요한 라이�
 ---
 
 ##로컬 톰캣 서버에 커넥터로 연결하기
+
 ####Tomcat Connector 다운로드
 [***톰캣 커넥터 다운로드***](http://tomcat.apache.org/download-connectors.cgi) 페이지에서 Binary Release for selected versions 다운로드한다. 
 
@@ -86,6 +87,7 @@ worker.worker1.port=8009
 로컬 톰캣 커넥터와 동일하지만 host만 원격 서버 ip로 대체하였다.
 
 ## IIS 설정
+
 ###로컬 톰캣
 제어판 > 프로그램 및 기능 > Windows 기능 사용/사용 안함 > 인터넷 정보 서비스 > World Wide Web 서비스 > 응용 프로그램 개발 기능 > ISAPI 필터와 ISAPI 확장을 체크하여 설치한다.
 
