@@ -1,5 +1,6 @@
 ---
 title: PHP(CGI)에서 Windows Network Drive에 파일 쓰기
+keywords: php, windows, network, drive, write
 tags: Web
 published: true
 sidebar: mydoc_sidebar

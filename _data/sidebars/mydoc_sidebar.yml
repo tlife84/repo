@@ -32,36 +32,36 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: IIS와 톰캣 연결하기
-      url: /mydoc_connect_iis_tomcat.html
-      output: web, pdf
-
     - title: 톰캣 시작위치 변경
       url: /mydoc_tomcat_starting_location.html
-      output: web, pdf
-
-    - title: PHP에서 Windows Network Drive에 파일 쓰기
-      url: /mydoc_access_network_dirve_on_php.html
       output: web, pdf
 
     - title: HTTP 요청 사이즈 변경
       url: /mydoc_http_request_size.html
       output: web, pdf
 
-    - title: Support
-      url: /mydoc_support.html
+    - title: IIS와 톰캣 연결하기
+      url: /mydoc_connect_iis_tomcat.html
       output: web, pdf
 
-  - title: Release Notes
+    - title: PHP에서 Windows Network Drive에 파일 쓰기
+      url: /mydoc_access_network_dirve_on_php.html
+      output: web, pdf
+
+    - title: PHP Remote(Backend) Debugging 환경 구성하기
+      url: /mydoc_php_debug.html
+      output: web, pdf
+
+  - title: Tools
     output: web, pdf
     folderitems:
 
-    - title: 6.0 Release notes
-      url: /mydoc_release_notes_60.html
+    - title: 윈도우에서 오래된 파일 자동으로 삭제하기
+      url: /mydoc_automatically_delete_file.html
       output: web, pdf
 
-    - title: 5.0 Release notes
-      url: /mydoc_release_notes_50.html
+    - title: Git과 Beyond Compare 4 연동하기
+      url: /mydoc_git_beyond.html
       output: web, pdf
 
   - title: Installation
