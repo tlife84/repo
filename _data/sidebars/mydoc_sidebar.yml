@@ -72,6 +72,10 @@ entries:
       url: /mydoc_git_beyond.html
       output: web, pdf
 
+    - title: VMWare Player 포트포워딩
+      url: /mydoc_vmplayer_port_forwarding.html
+      output: web, pdf
+
   - title: Big Data & Machine Learning
     output: web, pdf
     folderitems:  
@@ -86,9 +90,7 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Pages
-      url: /mydoc_pages.html
-      output: web, pdf
+    
 
     - title: Posts
       url: /mydoc_posts.html

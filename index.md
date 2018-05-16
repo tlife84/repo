@@ -15,6 +15,7 @@ summary: 이 노트는 작성자 본인을 위한 것으로서 내용이 다소 
   <button class="btn btn-primary" data-group="home">Home</button>
   <button class="btn btn-primary" data-group="web">Web</button>
   <button class="btn btn-primary" data-group="tools">Tools</button>
+  <button class="btn btn-primary" data-group="big data & machine learning">Big Data & Machine Learning</button>
 </div>      
 
 <div id="grid" class="row">
@@ -36,7 +37,6 @@ summary: 이 노트는 작성자 본인을 위한 것으로서 내용이 다소 
                   </ul>
                </div>
             </div>
-    
     </div>
    
 
@@ -77,7 +77,24 @@ summary: 이 노트는 작성자 본인을 위한 것으로서 내용이 다소 
                   </ul>
                </div>
             </div>
+    </div>
 
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["big data & machine learning"]'>
+
+               <div class="panel panel-default">
+               <div class="panel-heading">Big Data & Machine Learning</div>
+               <div class="panel-body">
+                  <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "Big Data & Machine Learning" %}
+                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %} 
+                  </ul>
+               </div>
+            </div>
     </div>
     <!-- sizer -->
     <div class="col-xs-6 col-sm-4 col-md-1 shuffle_sizer"></div>          
