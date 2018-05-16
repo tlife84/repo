@@ -10,12 +10,12 @@ summary: 이 노트는 작성자 본인을 위한 것으로서 내용이 다소 
 <script src="js/jquery.shuffle.min.js"></script>
 <script src="js/jquery.ba-throttle-debounce.min.js"></script>
 
-      <div class="filter-options">
-      <button class="btn btn-primary" data-group="all">All</button>
-      <button class="btn btn-primary" data-group="home">Home</button>
-      <button class="btn btn-primary" data-group="web">Web</button>
-      <button class="btn btn-primary" data-group="tools">Tools</button>
-    </div>      
+<div class="filter-options">
+  <button class="btn btn-primary" data-group="all">All</button>
+  <button class="btn btn-primary" data-group="home">Home</button>
+  <button class="btn btn-primary" data-group="web">Web</button>
+  <button class="btn btn-primary" data-group="tools">Tools</button>
+</div>      
 
 <div id="grid" class="row">
 
