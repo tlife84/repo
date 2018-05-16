@@ -3,7 +3,7 @@ title: IIS 7.0에서 http를 https로 강제 변환하기
 tags: [Web]
 keywords: iis, http, https, 변환
 sidebar: mydoc_sidebar
-permalink: mydoc_iis_http_https.html
+permalink: mydoc_redirect_https_on_iis.html
 folder: mydoc
 ---
 
