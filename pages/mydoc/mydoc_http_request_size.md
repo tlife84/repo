@@ -1,6 +1,6 @@
 ---
 title: HTTP 요청 사이즈 변경
-keywords: http, request, size
+keywords: http, request, size, 요청, 사이즈, 변경
 tags: [Web]
 sidebar: mydoc_sidebar
 permalink: mydoc_http_request_size.html

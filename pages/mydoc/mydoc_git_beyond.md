@@ -1,7 +1,7 @@
 ---
 title: Git과 Beyond Compare 4 연동하기
-tags: [Tool]
-keywords: git, beyond, compare
+tags: [Tools]
+keywords: git, beyond, compare, 비욘드
 sidebar: mydoc_sidebar
 permalink: mydoc_git_beyond.html
 folder: mydoc

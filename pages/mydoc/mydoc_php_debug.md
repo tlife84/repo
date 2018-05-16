@@ -1,7 +1,7 @@
 ---
 title: PHP Remote(Backend) Debugging 환경 구성하기
 tags: [Web]
-keywords: php, remote, backend, debug
+keywords: php, remote, backend, debug, 원격, 리모트, 디버깅
 sidebar: mydoc_sidebar
 permalink: mydoc_php_debug.html
 folder: mydoc

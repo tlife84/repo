@@ -1,7 +1,7 @@
 ---
 title: 톰캣 시작위치 변경
 tags: [Web]
-keywords: tomcat, start, location
+keywords: tomcat, start, location, 톰캣, 시작, 위치, 변경
 sidebar: mydoc_sidebar
 permalink: mydoc_tomcat_starting_location.html
 folder: mydoc
