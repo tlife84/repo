@@ -34,13 +34,15 @@ redirectHttpToHttps();
 
 * 403.4 에러페이지 지정  
 CMD창을 연 후 다음 명령어를 실행한다.
-~~~
+
+```
 C:\Windows\System32\inetsrv\appcmd unlock config –section:system.webServer/httpErros
-~~~
+```
+
 IIS 오류페이지는 기본으로 지정돼있는 상태코드의 경우는 경로만 바꿔주면 되지만 403.4같이 상태코드에 없는 것들은 **C:\Windows\System32\inetsrv\config\applicationHost.config** 파일을 직접 편집해야 한다. 그러나 http오류 페이지는 Default로 Override가 허용되지 않기 때문에 위 명령어로 Override를 가능하게 해준다.  
 편집기에서 applicationHost.config 파일을 연다.
 
-~~~html
+```html
 <httpErrors errorMode="Custom" defaultPath="C:\inetpub\wwwroot\403-4.htm" lockAttributes="allowAbsolutePathsWhenDelegated,defaultPath">
             <error statusCode="401" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="401.htm" />
             <error statusCode="403" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="403.htm" />
@@ -53,16 +55,18 @@ IIS 오류페이지는 기본으로 지정돼있는 상태코드의 경우는 �
             <error statusCode="502" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="502.htm" />
                 
 </httpErrors>
-~~~
+```
+
 위의 코드부분을 검색한 뒤 403 코드 부분 아래에 다음 내용을 추가한다. (꼭 403 아래에 추가하지 않아도 상관은 없다.)
 
-~~~html
+```html
 <remove statusCode="403" subStatusCode="4" />
 <error statusCode="403" subStatusCode="4" path="C:\inetpub\wwwroot\403-4.htm" responseMode="File" />
-~~~
+```
+
 기존에 있던 403.4 코드를 지우고(눈에 보이진 않았지만) 새로 추가하여 path를 지정해주는 내용이다.
 
-~~~html
+```html
 <httpErrors errorMode="Custom" defaultPath="C:\inetpub\wwwroot\403-4.htm" lockAttributes="allowAbsolutePathsWhenDelegated,defaultPath">
             <error statusCode="401" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="401.htm" />
             <error statusCode="403" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="403.htm" />
@@ -77,5 +81,6 @@ IIS 오류페이지는 기본으로 지정돼있는 상태코드의 경우는 �
             <error statusCode="502" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="502.htm" />
                 
 </httpErrors>
-~~~
+```
+
 최종적으로 수정한 내용이다. IIS를 재실행하면 오류페이지에 403.4 코드의 오류페이지가 지정돼있는 것을 확인할 수 있다.
