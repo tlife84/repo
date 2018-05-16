@@ -7,10 +7,8 @@ permalink: index.html
 summary: 이 노트는 작성자 본인을 위한 것으로서 내용이 다소 자세하지 않을 수 있습니다.
 ---
 
-{% unless site.output == "pdf" %}
 <script src="js/jquery.shuffle.min.js"></script>
 <script src="js/jquery.ba-throttle-debounce.min.js"></script>
-{% endunless %}
 
       <div class="filter-options">
       <button class="btn btn-primary" data-group="all">All</button>
@@ -30,7 +28,7 @@ summary: 이 노트는 작성자 본인을 위한 것으로서 내용이 다소 
                   <ul>
                 {% for page in site.pages %}
                 {% for tag in page.tags %}
-                {% if tag == "home" %}
+                {% if tag == "Home" %}
                   <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
                 {% endif %}
                 {% endfor %}
@@ -50,7 +48,7 @@ summary: 이 노트는 작성자 본인을 위한 것으로서 내용이 다소 
                 <ul>
                     {% for page in site.pages %}
                     {% for tag in page.tags %}
-                    {% if tag == "content-types" %}
+                    {% if tag == "Web" %}
                     <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
                     {% endif %}
                     {% endfor %}
@@ -71,7 +69,7 @@ summary: 이 노트는 작성자 본인을 위한 것으로서 내용이 다소 
                   <ul>
                 {% for page in site.pages %}
                 {% for tag in page.tags %}
-                {% if tag == "formatting" %}
+                {% if tag == "Tools" %}
                   <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
                 {% endif %}
                 {% endfor %}
@@ -87,6 +85,5 @@ summary: 이 노트는 작성자 본인을 위한 것으로서 내용이 다소 
 
     </div><!-- /#grid -->
 
-{% unless site.output == "pdf" %}
+
 {% include initialize_shuffle.html %}
-{% endunless %}
