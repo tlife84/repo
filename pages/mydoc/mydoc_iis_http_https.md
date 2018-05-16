@@ -16,23 +16,7 @@ folder: mydoc
 
 * 403.4 에러페이지 작성 (파일이름은 임의로 지정해도 된다. 확장자는 html)  
 
-```html
-<html>
-<head><title>Redirecting...</title></head>
-<script language="JavaScript">
-<!-- 이 페이지에서 실제로 함수가 호출되어 주석처리하였다. 실제 파일에서는 이 주석을 제거한다.
-function redirectHttpToHttps()
-{
-    var httpURL= window.location.hostname + window.location.pathname + window.location.search;
-    var httpsURL= "https://" + httpURL;
-    window.location = httpsURL;
-}
-redirectHttpToHttps(); -->
-</script>
-<body>
-</body>
-</html>
-```
+
 
 * 403.4 에러페이지 지정  
 CMD창을 연 후 다음 명령어를 실행한다.
