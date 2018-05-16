@@ -1,6 +1,6 @@
 ---
 title: IIS DCOM 오류
-tags: [Web]
+tags: [Troubleshooting]
 keywords: iis, dcom, application, exception
 summary: "Application has thrown an uncaught exception and is terminated: Error: 'aaa.xlsx' 파일을 사용할 수 없습니다. 원인은 다음과 같습니다."
 sidebar: mydoc_sidebar

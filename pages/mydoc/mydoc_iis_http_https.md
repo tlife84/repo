@@ -20,13 +20,13 @@ folder: mydoc
 <html>
 <head><title>Redirecting...</title></head>
 <script language="JavaScript">
+<!-- 이 페이지에서 실제로 함수가 호출되어 주석처리하였다. 실제 파일에서는 이 주석을 제거한다.
 function redirectHttpToHttps()
 {
     var httpURL= window.location.hostname + window.location.pathname + window.location.search;
     var httpsURL= "https://" + httpURL;
     window.location = httpsURL;
 }
-<!-- 이 페이지에서 실제로 함수가 호출되어 주석처리하였다. 실제 파일에는 이 주석을 제거한다.
 redirectHttpToHttps(); -->
 </script>
 <body>

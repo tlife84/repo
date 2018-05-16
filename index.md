@@ -16,6 +16,7 @@ summary: 이 노트는 작성자 본인을 위한 것으로서 내용이 다소 
   <button class="btn btn-primary" data-group="web">Web</button>
   <button class="btn btn-primary" data-group="tools">Tools</button>
   <button class="btn btn-primary" data-group="big data & machine learning">Big Data & Machine Learning</button>
+  <button class="btn btn-primary" data-group="troubleshooting">Troubleshooting</button>
 </div>      
 
 <div id="grid" class="row">
@@ -88,6 +89,24 @@ summary: 이 노트는 작성자 본인을 위한 것으로서 내용이 다소 
                 {% for page in site.pages %}
                 {% for tag in page.tags %}
                 {% if tag == "Big Data & Machine Learning" %}
+                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %} 
+                  </ul>
+               </div>
+            </div>
+    </div>
+
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["troubleshooting"]'>
+
+               <div class="panel panel-default">
+               <div class="panel-heading">Troubleshooting</div>
+               <div class="panel-body">
+                  <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "Troubleshooting" %}
                   <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
                 {% endif %}
                 {% endfor %}
