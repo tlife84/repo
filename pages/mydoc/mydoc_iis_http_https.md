@@ -15,7 +15,8 @@ folder: mydoc
 여기까지 진행했다면 http로 접속했을 때 위와 같이 403 에러가 발생한다. 위 에러코드는 실제로는 403.4 에러다. 다음 해줘야 하는 것은 403.4 에러페이지를 만들어서 http로 접속했던 주소를 https로 변경하는 일이다.
 
 * 403.4 에러페이지 작성 (파일이름은 임의로 지정해도 된다. 확장자는 html)
-```
+
+```html
 <html>
 <head><title>Redirecting...</title></head>
 <script language="JavaScript">
@@ -25,7 +26,8 @@ function redirectHttpToHttps()
     var httpsURL= "https://" + httpURL;
     window.location = httpsURL;
 }
-redirectHttpToHttps();
+<!-- 이 페이지에서 실제로 함수가 호출되어 주석처리하였다. 실제 파일에는 이 주석을 제거한다.
+redirectHttpToHttps(); -->
 </script>
 <body>
 </body>
