@@ -94,9 +94,7 @@ entries:
 
     - title: IIS DCOM 오류
       url: /mydoc_iis_dcom_error.html
-      output: web, pdf
-
-    
+      output: web, pdf    
 
     - title: Conditional logic
       url: /mydoc_conditional_logic.html
