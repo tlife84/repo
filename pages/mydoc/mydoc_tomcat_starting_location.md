@@ -1,6 +1,6 @@
 ---
 title: 톰캣 시작위치 변경
-tags: Web
+tags: [Web]
 keywords: 
 sidebar: mydoc_sidebar
 permalink: mydoc_tomcat_starting_location.html

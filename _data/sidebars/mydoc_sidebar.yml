@@ -44,8 +44,8 @@ entries:
       url: /mydoc_access_network_dirve_on_php.html
       output: web, pdf
 
-    - title: About the theme author
-      url: /mydoc_about.html
+    - title: HTTP 요청 사이즈 변경
+      url: /mydoc_http_request_size.html
       output: web, pdf
 
     - title: Support

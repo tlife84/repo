@@ -1,6 +1,6 @@
 ---
 title: IIS와 톰캣 연결하기
-tags: Web
+tags: [Web]
 sidebar: mydoc_sidebar
 permalink: mydoc_connect_iis_tomcat.html
 folder: mydoc
