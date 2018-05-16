@@ -36,12 +36,20 @@ entries:
       url: /mydoc_tomcat_starting_location.html
       output: web, pdf
 
+    - title: 톰캣에 자바 서블릿 맵핑하기
+      url: /mydoc_mapping_tomcat_java_servlet.html
+      output: web, pdf
+
     - title: HTTP 요청 사이즈 변경
       url: /mydoc_http_request_size.html
       output: web, pdf
 
     - title: IIS와 톰캣 연결하기
       url: /mydoc_connect_iis_tomcat.html
+      output: web, pdf
+
+    - title: IIS DCOM 오류
+      url: /mydoc_iis_dcom_error.html
       output: web, pdf
 
     - title: PHP에서 Windows Network Drive에 파일 쓰기
@@ -64,21 +72,15 @@ entries:
       url: /mydoc_git_beyond.html
       output: web, pdf
 
-  - title: Installation
+  - title: Big Data & Machine Learning
     output: web, pdf
-    folderitems:
+    folderitems:  
 
-    - title: About Ruby, Gems, Bundler, etc.
-      url: /mydoc_about_ruby_gems_etc.html
+    - title: Ambari 설치
+      url: /mydoc_install_ambari.html
       output: web, pdf
 
-    - title: Install Jekyll on Mac
-      url: /mydoc_install_jekyll_on_mac.html
-      output: web, pdf
-
-    - title: Install Jekyll on Windows
-      url: /mydoc_install_jekyll_on_windows.html
-      output: web, pdf
+    
 
   - title: Authoring
     output: web, pdf
