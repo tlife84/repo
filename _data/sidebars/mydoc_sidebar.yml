@@ -36,12 +36,12 @@ entries:
       url: /mydoc_connect_iis_tomcat.html
       output: web, pdf
 
-    - title: Test navigation
-      url: /mydoc_test_nav.html
+    - title: 톰캣 시작위치 변경
+      url: /mydoc_tomcat_starting_location.html
       output: web, pdf
 
-    - title: Supported features
-      url: /mydoc_supported_features.html
+    - title: PHP에서 Windows Network Drive에 파일 쓰기
+      url: /mydoc_access_network_dirve_on_php.html
       output: web, pdf
 
     - title: About the theme author
