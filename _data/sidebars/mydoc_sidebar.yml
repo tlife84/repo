@@ -252,15 +252,6 @@ entries:
       url: /mydoc_shuffle.html
       output: web, pdf
 
-  - title: Troubleshooting
-    output: web, pdf
-
-    folderitems:
-
-    - title: Troubleshooting
-      url: /mydoc_troubleshooting.html
-      output: web, pdf
-
   - title: Tag archives
     output: web
     folderitems:
