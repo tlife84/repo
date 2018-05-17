@@ -96,8 +96,8 @@ entries:
       url: /mydoc_iis_dcom_error.html
       output: web, pdf    
 
-    - title: Conditional logic
-      url: /mydoc_conditional_logic.html
+    - title: 아웃룩에서 winmail.dat로 메일수신
+      url: /mydoc_outlook_winmail.html
       output: web, pdf
 
     - title: Content reuse
