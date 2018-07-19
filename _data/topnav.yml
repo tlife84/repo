@@ -3,10 +3,8 @@
 topnav:
 - title: Topnav
   items:
-    - title: GitHub
-      external_url: https://github.com/tlife84/jgdy
-    - title: News
-      url: /news
+    #- title: GitHub
+    #  external_url: https://github.com/tlife84/tlife84.github.io
 
 #Topnav dropdowns
 topnav_dropdowns:
@@ -16,5 +14,5 @@ topnav_dropdowns:
       folderitems:
         - title: 개발노트
           url: /index.html
-        - title: 비공개노트
-          url: /private_index.html
+        #- title: 비공개노트
+        #  url: /private_index.html
