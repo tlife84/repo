@@ -44,6 +44,10 @@ entries:
       url: /mydoc_http_request_size.html
       output: web, pdf
 
+    - title: IIS에 Local SSL 구성하기
+      url: /mydoc_local_ssl.html
+      output: web, pdf
+
     - title: IIS와 톰캣 연결하기
       url: /mydoc_connect_iis_tomcat.html
       output: web, pdf
@@ -62,6 +66,18 @@ entries:
 
     - title: PHP Remote(Backend) Debugging 환경 구성하기
       url: /mydoc_php_debug.html
+      output: web, pdf
+
+    - title: SimpleSAMLphp를 이용하여 SAML Service Provider 구축하기
+      url: /mydoc_simple_saml.html
+      output: web, pdf
+
+    - title: SimpleSAMLphp에서 메타데이터 변환하기
+      url: /mydoc_converting_metadata.html
+      output: web, pdf
+
+    - title: SSOCircle을 이용하여 무료로 SAML IDP 구축하기
+      url: /mydoc_sso_using_ssocircle.html
       output: web, pdf
 
   - title: Tools
@@ -114,4 +130,8 @@ entries:
 
     - title: IIS DCOM 오류
       url: /mydoc_iis_dcom_error.html
-      output: web, pdf    
+      output: web, pdf
+
+    - title: Nodejs spawn EPERM 오류
+      url: /mydoc_nodejs_eperm_error.html
+      output: web, pdf

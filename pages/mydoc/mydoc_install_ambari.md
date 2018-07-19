@@ -2,6 +2,7 @@
 title: Ambari 설치
 tags: [Big Data & Machine Learning]
 keywords: ambari, install, 암바리, 설치
+published: false
 summary: "추후에 정리하자"
 sidebar: mydoc_sidebar
 permalink: mydoc_install_ambari.html
@@ -57,3 +58,15 @@ init은 snapshot 이름
 mkdir <공유폴더명>  
 mount -t vboxsf <VirtualBox에서 지정한 공유폴더이름> <공유폴더명>
 ```
+
+## Zeppelin interpreter 환경설정
+오른쪽 상단 계정 클릭 > Interpreter
+
+* spark 인터프리터의 Properties에 SPARK_HOME=/usr/hdp/current/spark-client 추가
+
+* 최상단 `+Create` 클릭
+    - Interpreter Name: 'spark2'
+    - Interpreter group: spark
+    - Save
+
+* 추가된 spark2 인터프리터의 Properties에 SPARK_HOME=/usr/hdp/current/spark2-client 추가

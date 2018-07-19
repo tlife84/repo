@@ -11,11 +11,11 @@ folder: mydoc
 원하는 위치에 배치파일을 생성한다. 여기서는 이름을 AutoDelete.bat로 생성하였다. 배치파일의 내용은 아래와 같다.
 
 ```
-forfiles -p "C:\Users\Ktl\Downloads" -s -m *.* /D -30 /C "cmd /c del /Q @path"
+forfiles -p "%USERPROFILE%\Downloads" -s -m *.* /D -30 /C "cmd /c del /Q @path"
 ```
 
 ### 옵션 설명
-* -p "C:\Users\Ktl\Downloads": -p는 검색을 시작할 경로를 지정하기 위해 사용한다. C:\Users\Ktl\Downloads 디렉토리를 검색하겠다는 의미다.
+* -p "%USERPROFILE%\Downloads": -p는 검색을 시작할 경로를 지정하기 위해 사용한다. %USERPROFILE%은 사용자 계정의 디렉토리다. 즉 사용자 계정의 Downloads 디렉토리를 검색하겠다는 의미다.
 * -s: 하위 디렉토리도 탐색한다.
 * -m \*.\*: 검색할 파일 형태를 지정한다.
 * /D -30: 30일 이상이 경과한 파일을 검색한다.
@@ -27,42 +27,24 @@ forfiles -p "C:\Users\Ktl\Downloads" -s -m *.* /D -30 /C "cmd /c del /Q @path"
 
 > 주의: 위 명령어는 디렉토리 자체는 지우지 못한다.
 
-##작업 스케쥴러에 등록
-작업 스케쥴러 실행
+## 작업 스케쥴러에 등록
+시작 > 작업 스케쥴러 실행
 
-![](../../images/delete_automatically_old_files_on_windows_1.png)
+`기본 작업 만들기` 선택  
 
-기본 작업 만들기 선택
-
-![](../../images/delete_automatically_old_files_on_windows_2.png)
-
-이름과 설명 기입
-
-![](../../images/delete_automatically_old_files_on_windows_3.png)
+이름 기입
 
 작업 주기 선택
 
-![](../../images/delete_automatically_old_files_on_windows_4.png)
-
 작업 시작 시간 지정
-
-![](../../images/delete_automatically_old_files_on_windows_5.png)
 
 프로그램 시작 선택
 
-![](../../images/delete_automatically_old_files_on_windows_6.png)
+위에서 만든 배치파일 선택
 
-배치파일 선택
+`[마침]을 클릭할 때 이 작업의 [속성] 대화 상자 열기` 체크 후 마침
 
-![](../../images/delete_automatically_old_files_on_windows_7.png)
-
-[마침]을 클릭할 때 이 작의 [속성] 대화 상자 열기 체크 후 마침
-
-![](../../images/delete_automatically_old_files_on_windows_8.png)
-
-스케쥴러가 서버에서 실행된다면 "사용자의 로그온 여부에 관계없이 실행"을 선택하고 "가장 높은 수준의 권한으로 실행"도 체크한다. 이를 체크하지 않을 경우 파일 액세스가 거부될 수 있다.
-
-![](../../images/delete_automatically_old_files_on_windows_9.png)
+스케쥴러가 서버에서 실행된다면 `사용자의 로그온 여부에 관계없이 실행`을 선택하고 `가장 높은 수준의 권한으로 실행`도 체크한다. 이를 체크하지 않을 경우 파일 액세스가 거부될 수 있다.
 
 ## 참고 사이트
 - [How to Automatically Delete Files in Windows](https://www.online-tech-tips.com/software-reviews/automatically-delete-files/)

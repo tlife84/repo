@@ -1,0 +1,37 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+
+entries:
+- title: Sidebar
+  product: 비공개 개발노트
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Home
+    output: web, pdf
+    folderitems:
+
+    - title: 비공개 Home
+      url: /private_index.html
+      output: web, pdf
+      type: homepage
+
+  - title: SAMSUNG
+    output: web, pdf
+    folderitems:
+
+    - title: SSL 인증서 교체 작업
+      url: /private_samsung_ssl.html
+      output: web, pdf
