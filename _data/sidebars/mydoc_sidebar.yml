@@ -7,16 +7,16 @@ entries:
   folders:
 
   - title:
-    output: pdf
+    output: web
     type: frontmatter
     folderitems:
     - title:
       url: /titlepage.html
-      output: pdf
+      output: web
       type: frontmatter
     - title:
       url: /tocpage.html
-      output: pdf
+      output: web
       type: frontmatter
 
   - title: Home
@@ -27,6 +27,70 @@ entries:
       url: /index.html
       output: web, pdf
       type: homepage
+
+  - title: Big Data & Machine Learning
+    output: web, pdf
+    folderitems:  
+
+    - title: Ambari 설치
+      url: /mydoc_install_ambari.html
+      output: web, pdf
+
+  - title: TDD
+    output: web, pdf
+    folderitems:  
+
+    - title: PHPUnit 테스트 환경 만들기
+      url: /mydoc_phpunit.html
+      output: web, pdf
+
+  - title: Tools
+    output: web, pdf
+    folderitems:
+
+    - title: 윈도우에서 오래된 파일 자동으로 삭제하기
+      url: /mydoc_automatically_delete_file.html
+      output: web, pdf
+
+    - title: Git과 Beyond Compare 4 연동하기
+      url: /mydoc_git_beyond.html
+      output: web, pdf
+
+    - title: SQLCMD 커맨드에서 쌍따옴표 사용
+      url: /mydoc_sqlcmd_double_quotes.html
+      output: web, pdf
+
+    - title: VMWare Player 포트포워딩
+      url: /mydoc_vmplayer_port_forwarding.html
+      output: web, pdf  
+
+  - title: Troubleshooting
+    output: web, pdf
+    folderitems:
+
+    - title: 아웃룩에서 winmail.dat로 메일수신
+      url: /mydoc_outlook_winmail.html
+      output: web, pdf
+
+    - title: 톰캣 ClassNotFoundException
+      url: /mydoc_tomcat_classnotfound.html
+      output: web, pdf
+
+    - title: 톰캣 Out of memory
+      url: /mydoc_tomcat_out_of_memory.html
+      output: web, pdf
+    
+    - title: DCOM 오류
+      url: /mydoc_dcom_error.html
+      output: web, pdf
+
+    - title: IIS DCOM 오류
+      url: /mydoc_iis_dcom_error.html
+      output: web, pdf
+
+    - title: Nodejs spawn EPERM 오류
+      url: /mydoc_nodejs_eperm_error.html
+      output: web, pdf
 
   - title: Web
     output: web, pdf
@@ -78,60 +142,4 @@ entries:
 
     - title: SSOCircle을 이용하여 무료로 SAML IDP 구축하기
       url: /mydoc_sso_using_ssocircle.html
-      output: web, pdf
-
-  - title: Tools
-    output: web, pdf
-    folderitems:
-
-    - title: 윈도우에서 오래된 파일 자동으로 삭제하기
-      url: /mydoc_automatically_delete_file.html
-      output: web, pdf
-
-    - title: Git과 Beyond Compare 4 연동하기
-      url: /mydoc_git_beyond.html
-      output: web, pdf
-
-    - title: SQLCMD 커맨드에서 쌍따옴표 사용
-      url: /mydoc_sqlcmd_double_quotes.html
-      output: web, pdf
-
-    - title: VMWare Player 포트포워딩
-      url: /mydoc_vmplayer_port_forwarding.html
-      output: web, pdf
-
-  - title: Big Data & Machine Learning
-    output: web, pdf
-    folderitems:  
-
-    - title: Ambari 설치
-      url: /mydoc_install_ambari.html
-      output: web, pdf
-
-  - title: Troubleshooting
-    output: web, pdf
-    folderitems:
-
-    - title: 아웃룩에서 winmail.dat로 메일수신
-      url: /mydoc_outlook_winmail.html
-      output: web, pdf
-
-    - title: 톰캣 ClassNotFoundException
-      url: /mydoc_tomcat_classnotfound.html
-      output: web, pdf
-
-    - title: 톰캣 Out of memory
-      url: /mydoc_tomcat_out_of_memory.html
-      output: web, pdf
-    
-    - title: DCOM 오류
-      url: /mydoc_dcom_error.html
-      output: web, pdf
-
-    - title: IIS DCOM 오류
-      url: /mydoc_iis_dcom_error.html
-      output: web, pdf
-
-    - title: Nodejs spawn EPERM 오류
-      url: /mydoc_nodejs_eperm_error.html
       output: web, pdf

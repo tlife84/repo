@@ -1,6 +1,6 @@
 repository: tlife84/tlife84.github.io
 
-output: web
+output: web, pdf
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
 topnav_title: 개발노트
